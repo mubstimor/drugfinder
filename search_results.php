@@ -42,7 +42,7 @@ if(isset($_REQUEST['drugname'])){
 				<?php
 					 if(count_searchResults($drugname)==0)
 					 {
-					 	echo '<div class="alert alert-info">Oh snap! Your search did not return any results.<a href="add_drug.php">Click here</a> to add a new one.</div>';
+					 	echo '<div class="alert alert-info">Oh snap! Your search did not return any results. Drug is not registered, <a href="search_drug.php">Go back</a> to search for another.</div>';
 						}else
 							{
 						 ?>
