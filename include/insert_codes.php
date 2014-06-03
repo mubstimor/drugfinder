@@ -116,6 +116,41 @@ function assign_contact($contact,$group){
 	}
 }
 
+function add_license($drugstore,$startDate,$expiryDate){
+		$sql = "INSERT INTO `clinic_license` (clinicId,startDate,endDate) VALUES('$drugstore','$startDate','$expiryDate')";
+		$result = mysql_query($sql) or (mysql_query("ROLLBACK") and die(mysql_error() . " - $sql"));
+		if($result){
+			$inserted=true;
+		}else{
+			$inserted=false;
+		}
+		return $inserted;	
+}
+
+function add_drug_stock($drugId,$serial,$expiryDate,$quantity){
+	$sql = "INSERT INTO `drug_stock` (drugId,serialNumber,expiryDate,carton_quantity) VALUES('$drugId','$serial','$expiryDate','$quantity')";
+	$result = mysql_query($sql) or (mysql_query("ROLLBACK") and die(mysql_error() . " - $sql"));
+	if($result){
+		$inserted=true;
+	}else{
+		$inserted=false;
+	}
+	return $inserted;
+}
+
+function add_drug_distribution($drugId,$serial,$clinicId,$quantity){
+	$sql = "INSERT INTO `drug_distribution` (drugId,serialNumber,clinicId,carton_quantity) VALUES('$drugId','$serial','$clinicId','$quantity')";
+	$result = mysql_query($sql) or (mysql_query("ROLLBACK") and die(mysql_error() . " - $sql"));
+	if($result){
+		$inserted=true;
+		mysql_query("UPDATE `drug_stock` SET carton_quantity=(carton_quantity-'$quantity') where serialNumber='$serial'");
+		
+	}else{
+		$inserted=false;
+	}
+	return $inserted;
+}
+
 /**
  * send a message to a group
  * */

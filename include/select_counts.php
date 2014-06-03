@@ -85,6 +85,32 @@
 		return $category;
 	}
 	
+	/**
+	 * Get All clinics/drug stores
+	 * */
+	function get_drug_stores(){
+		$get_stores = mysql_query("SELECT * FROM `clinic` order by clinicId DESC");
+		while($p = mysql_fetch_assoc($get_stores)){
+			$name = $p['clinicName'];
+			$clinic_id = $p['clinicId'];
+			$address = $p['address'];
+			$option .= "<option value='$clinic_id'>$name : $address</option>";
+		}
+		return $option;
+	}
+	
+	/**
+	 * Get All drugs
+	 * */
+	function get_drugs(){
+		$get_stores = mysql_query("SELECT * FROM `drug` order by drugName DESC");
+		while($p = mysql_fetch_assoc($get_stores)){
+			$name = $p['drugName'];
+			$drug_id = $p['drugId'];			
+			$option .= "<option value='$drug_id'>$name</option>";
+		}
+		return $option;
+	}
 	
 	/**
 	 * Get All Groups for a given client from database in a dropdown

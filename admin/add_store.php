@@ -58,7 +58,7 @@ if(isset($_REQUEST['contactNum'])){
 							if(add_drug_store($cname, $email, $phone, $address,$latitude,$longitude,$username,$password,$adminId)){
 								echo '<div class="alert alert-success">
 							<button type="button" class="close" data-dismiss="alert">X</button>
-							<strong>Well done!</strong> You successfully added a new drug store.
+							<strong>Well done!</strong> You successfully added a new drug store. <a href="add_license.php">Add clinic\'s License</a>
 						</div>';
 							}else{
 								echo '<div class="alert alert-error">

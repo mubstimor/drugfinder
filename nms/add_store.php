@@ -6,7 +6,7 @@ if(!isset($_SESSION['NMS_ID'])){
 }
 $adminId = $_SESSION['NMS_ID'];
 
-include('../include/nms_header.php');
+include('../include/admin_header.php');
 include("../include/config.php");
 include("../include/insert_codes.php");
 include("../include/function.php");

@@ -42,6 +42,21 @@
 
 	<!-- The fav icon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
+	<script>
+	$(document).ready(function(){
+			
+		var d = new Date();
+
+		var month = d.getMonth()+1;
+		var day = d.getDate();
+
+		var output = d.getFullYear() + '/' +
+			(month<10 ? '0' : '') + month + '/' +
+			(day<10 ? '0' : '') + day;
+			});
+			$("#date").html(output);
+			
+</script>
 		
 </head>
 
@@ -89,14 +104,15 @@
 						<li class="nav-header hidden-tablet">Main</li>
 						<li><a class="ajax-link" href="index.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>						
 						<li><a class="ajax-link" href="search_drug.php"><i class="icon-lock"></i><span class="hidden-tablet"> Add Drug</span></a></li>
-						<li><a class="ajax-link" href="add_store.php"><i class="icon-eye-open"></i><span class="hidden-tablet"> Distribute Drug</span></a></li>
-						<li><a class="ajax-link" href="search_drug.php"><i class="icon-lock"></i><span class="hidden-tablet"> Record Stock</span></a></li>
+						<li><a class="ajax-link" href="distribute_drug.php"><i class="icon-eye-open"></i><span class="hidden-tablet"> Distribute Drug</span></a></li>
+						<li><a class="ajax-link" href="record_stock.php"><i class="icon-lock"></i><span class="hidden-tablet"> Record Stock</span></a></li>
 						
 						
 						<li class="nav-header hidden-tablet">View Information</li>
-						<li><a class="ajax-link" href="registered_drugs.php"><i class="icon-align-justify"></i><span class="hidden-tablet"> Drugs</span></a></li>
+						<li><a class="ajax-link" href="registered_drugs.php"><i class="icon-align-justify"></i><span class="hidden-tablet"> Registered Drugs</span></a></li>
 						<li><a class="ajax-link" href="drug_stores.php"><i class="icon-calendar"></i><span class="hidden-tablet"> Drug Stores</span></a></li>
-						<li><a class="ajax-link" href="drug_stores.php"><i class="icon-list-alt"></i><span class="hidden-tablet"> Transaction History</span></a></li>
+						<li><a class="ajax-link" href="drug_stock.php"><i class="icon-ban-circle"></i><span class="hidden-tablet"> Drug Stock</span></a></li>
+						<li><a class="ajax-link" href="transactions.php"><i class="icon-list-alt"></i><span class="hidden-tablet"> Transaction History</span></a></li>
 						
 					
 						<li class="nav-header hidden-tablet">Contact Drug Stores</li>

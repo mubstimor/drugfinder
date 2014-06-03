@@ -67,11 +67,11 @@ if(isset($_REQUEST['id'])){
 							<?php 
 														
 							$select = "select * from drug d where drugId='$drugId'";
-							$query=mysql_query($select) or die('<div class="alert alert-success">User not found, <a href="my_contacts.php">click here</a> to view contacts</div>');
+							$query=mysql_query($select) or die('<div class="alert alert-success">Drug not found, <a href="#">click here</a> to view contacts</div>');
 							$count = mysql_num_rows($query);
 							
 							if($count==0){
-							echo '<div class="alert alert-success">User not found, <a href="my_contacts.php">click here</a> to view contacts</div>';	
+							echo '<div class="alert alert-success">Drug not found, <a href="#">click here</a> to view drugs</div>';	
 							}
 							while($result=mysql_fetch_array($query))
 							{

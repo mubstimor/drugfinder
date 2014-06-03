@@ -66,7 +66,7 @@ require('../include/select_counts.php');
 						 <div class="span4 ">
 								<div class="well">
 								 
-								  <h3>Group #MEDICS</h3>
+								  <h3>Group CSC 14-88</h3>
 								  <p>COCIS, MUK<br/>
 								  +(256)077-8-919-203<br/>
 								  jgyagenda@cis.mak.ac.ug

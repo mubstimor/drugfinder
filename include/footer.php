@@ -22,7 +22,7 @@
 		</div>
 
 		<footer>
-			<p class="pull-left">&copy; <a href="http://usman.it" target="_blank">DrugFinder</a> <?php echo date('Y') ?></p>
+			<p class="pull-left">&copy; <a href="#" target="_blank">DrugFinder</a> <?php echo date('Y') ?></p>
 			<p class="pull-right">Powered by: <a href="http://smsme.info/drugfinder">Group CSC 14-88</a></p>
 		</footer>
 		<?php } ?>

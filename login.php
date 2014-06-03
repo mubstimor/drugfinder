@@ -26,7 +26,7 @@ include('include/header.php');
 
 			<div class="row-fluid">
 				<div class="span12 center login-header">
-					<h2><img id="logo-img" src="img/hospital.png" width="100px" />Welcome to DrugFinder</h2>
+					<h2><img id="logo-img" src="img/hospital.png" width="100px" />Welcome to DrugFinder (Drug Store)</h2>
 				</div><!--/span-->
 			</div><!--/row-->
 			
